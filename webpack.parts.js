@@ -9,6 +9,8 @@ const APP_SOURCE = path.join(__dirname, "src");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpack = require('webpack');
 const { GitRevisionPlugin } = require('git-revision-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 exports.devServer = () => ({
   watch: true,
@@ -42,7 +44,7 @@ exports.extractCSS = ({ options = {}, loaders = [] } = {}) => {
       },
       plugins: [
         new MiniCssExtractPlugin({
-          filename: "[name].css",
+          filename: "[name].[contenthash].css",
         }),
       ],
     };
@@ -97,3 +99,24 @@ exports.attachRevision = () => ({
     }),
   ],
 });
+
+exports.minifyJavaScript = () => ({
+  optimization: { minimizer: [new TerserPlugin()] },
+});
+
+exports.minifyCSS = ({ options }) => ({
+  optimization: {
+    minimizer: [
+      new CssMinimizerPlugin({ minimizerOptions: options }),
+    ],
+  },
+});
+
+exports.setFreeVariable = (key, value) => {
+  const env = {};
+  env[key] = JSON.stringify(value);
+
+  return {
+    plugins: [new webpack.DefinePlugin(env)],
+  };
+};

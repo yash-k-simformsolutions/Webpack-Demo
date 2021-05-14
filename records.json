@@ -1,0 +1,71 @@
+{
+  "chunks": {
+    "byName": {
+      "main": 179,
+      "runtime": 666
+    },
+    "bySource": {
+      "0 ./node_modules/babel-loader/lib/index.js!./src/App.js ./lazy": 34,
+      "0 main": 666,
+      "1 main": 935,
+      "2 main": 179
+    },
+    "usedIds": [
+      34,
+      179,
+      666,
+      935
+    ]
+  },
+  "mini-css-extract-plugin /Users/yash.khorja/Desktop/Yola Yash/webpack-demo1/webpack-demo/node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[3]!./src/main.css": [
+    {
+      "chunks": {
+        "byName": {
+          "child": 396
+        },
+        "bySource": {
+          "0 child": 396
+        },
+        "usedIds": [
+          396
+        ]
+      },
+      "modules": {
+        "byIdentifier": {
+          "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[3]!./src/main.css": 354,
+          "./node_modules/css-loader/dist/runtime/api.js": 645,
+          "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js": 15
+        },
+        "usedIds": [
+          15,
+          354,
+          645
+        ]
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "./node_modules/babel-loader/lib/index.js!./src/index.js|ae8b9d245725083f16514fd55e5c0168": 203,
+      "./node_modules/babel-loader/lib/index.js!./src/lazy.js": 34,
+      "./node_modules/object-assign/index.js": 418,
+      "./node_modules/react-dom/cjs/react-dom.production.min.js": 448,
+      "./node_modules/react-dom/index.js": 935,
+      "./node_modules/react/cjs/react.production.min.js": 408,
+      "./node_modules/react/index.js": 294,
+      "./node_modules/scheduler/cjs/scheduler.production.min.js": 53,
+      "./node_modules/scheduler/index.js": 840
+    },
+    "usedIds": [
+      34,
+      53,
+      203,
+      294,
+      408,
+      418,
+      448,
+      840,
+      935
+    ]
+  }
+}

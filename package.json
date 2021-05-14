@@ -6,7 +6,8 @@
   "scripts": {
     "start": "wp --mode development",
     "watch": "nodemon --watch webpack.*.js --exec \"npm start\"",
-    "build": "wp --mode production"
+    "build": "wp --mode production",
+    "build:stats": "wp --mode production --json > stats.json"
   },
   "keywords": [],
   "author": "",
@@ -18,10 +19,12 @@
   "devDependencies": {
     "@babel/core": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.4",
+    "css-minimizer-webpack-plugin": "^3.0.0",
     "git-revision-webpack-plugin": "^5.0.0",
     "glob": "^7.1.7",
     "mini-css-extract-plugin": "^1.6.0",
@@ -31,6 +34,7 @@
     "purgecss-webpack-plugin": "^4.0.3",
     "style-loader": "^2.0.0",
     "tailwindcss": "^2.1.2",
+    "terser-webpack-plugin": "^5.1.2",
     "webpack": "^5.37.0",
     "webpack-merge": "^5.7.3",
     "webpack-nano": "^1.1.1",
